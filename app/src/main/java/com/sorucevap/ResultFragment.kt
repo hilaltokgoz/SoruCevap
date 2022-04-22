@@ -3,6 +3,7 @@ package com.sorucevap
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.sorucevap.databinding.FragmentResultBinding
 import com.zhuinden.fragmentviewbindingdelegatekt.viewBinding
@@ -21,6 +22,12 @@ class ResultFragment : Fragment(R.layout.fragment_result) {
         binding.resultText.text = when{
             args.result.equals("ankara",true) -> "Tebrikler Bildiniz."
                 else->"Üzgünüz Bilemediniz!"
+        }
+        binding.backButton.setOnClickListener {
+            findNavController().popBackStack(R.id.questionFragment,false)
+        }
+        binding.returnHomePageButton.setOnClickListener {
+           findNavController().popBackStack(R.id.homeFragment,false)
         }
     }
 }

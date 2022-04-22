@@ -24,7 +24,7 @@ class QuestionFragment : Fragment(R.layout.fragment_question) {
 
                 //SafeArgs ile
                 findNavController().navigate(
-                    QuestionFragmentDirections.actionQuestionFragmentToResultFragment(answer)
+                    QuestionFragmentDirections.actionQuestionFragmentToConfirmationDialog(answer)
                 )
 
 
