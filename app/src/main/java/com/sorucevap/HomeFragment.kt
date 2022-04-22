@@ -18,7 +18,10 @@ private  val binding by viewBinding (FragmentHomeBinding::bind )
         super.onViewCreated(view, savedInstanceState)
 
        binding.button.setOnClickListener {
-           findNavController().navigate(R.id.action_homeFragment_to_questionFragment)
+           //id ile
+           //findNavController().navigate(R.id.action_homeFragment_to_questionFragment)
+           //safeArgs ile
+           findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToQuestionFragment())
        }
     }
 }
